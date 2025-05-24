@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MonteringService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33de249c5141bbc97511348fd38ccd1ba2c293df")]
 [assembly: System.Reflection.AssemblyProductAttribute("MonteringService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MonteringService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

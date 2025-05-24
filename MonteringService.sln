@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonteringService", "MonteringService.csproj", "{FECD5393-E5D2-4AD2-EA6A-908E1B57A95D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FECD5393-E5D2-4AD2-EA6A-908E1B57A95D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FECD5393-E5D2-4AD2-EA6A-908E1B57A95D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FECD5393-E5D2-4AD2-EA6A-908E1B57A95D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FECD5393-E5D2-4AD2-EA6A-908E1B57A95D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37842F1F-5945-4B2D-819B-8308E0214343}
+	EndGlobalSection
+EndGlobal

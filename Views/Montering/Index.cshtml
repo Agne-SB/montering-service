@@ -42,20 +42,24 @@
 
 @section Scripts {
     <script>
-        var map = L.map('map').setView([62.4722, 6.1495], 12);
+        const map = L.map('map').setView([62.4722, 6.1495], 12);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
         const jobs = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model));
+        console.log("Jobs loaded:", jobs);
 
         jobs.forEach(job => {
-            if (job.latitude && job.longitude) {
-                L.marker([job.latitude, job.longitude])
+            if (job.Latitude && job.Longitude) {
+                L.marker([job.Latitude, job.Longitude])
                     .addTo(map)
-                    .bindPopup(`<strong>${job.refNo}</strong><br>${job.adresse}`);
+                    .bindPopup(`<strong>${job.RefNo}</strong><br>${job.Adresse}`);
+            } else {
+                console.warn("Missing coordinates for:", job.RefNo);
             }
         });
     </script>
 }
+

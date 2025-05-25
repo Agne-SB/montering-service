@@ -16,10 +16,7 @@ namespace MonteringService.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var jobs = await _context.MonteringJobs
-                .Where(j => j.Status != "Utført" && j.Status != "Retur")
-                .ToListAsync();
-
+            var jobs = await _context.MonteringJobs.ToListAsync();
             return View(jobs);
         }
 
@@ -44,16 +41,6 @@ namespace MonteringService.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
         }
-
-        [HttpPost]
-        public async Task<IActionResult> SetStatus(int id, string status)
-        {
-            var job = await _context.MonteringJobs.FindAsync(id);
-            if (job == null) return NotFound();
-
-            job.Status = status;
-            await _context.SaveChangesAsync();
-            return RedirectToAction("Index");
-        }
     }
 }
+

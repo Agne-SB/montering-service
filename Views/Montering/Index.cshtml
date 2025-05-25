@@ -13,9 +13,8 @@
                 <th>Adresse</th>
                 <th>Dato</th>
                 <th>Worker</th>
-                <th>Status</th>
-                <th>Handling</th>
             </tr>
+            
         </thead>
         <tbody>
             @foreach (var job in Model)
@@ -33,15 +32,6 @@
                         <form asp-action="SetWorker" asp-route-id="@job.Id" method="post" class="d-flex">
                             <input type="text" name="worker" value="@job.Worker" class="form-control form-control-sm" />
                             <button class="btn btn-sm btn-outline-success ms-2">💾</button>
-                        </form>
-                    </td>
-                    <td>@job.Status</td>
-                    <td>
-                        <form asp-action="SetStatus" asp-route-id="@job.Id" asp-route-status="Utført" method="post" style="display:inline;">
-                            <button class="btn btn-sm btn-outline-success">Utført</button>
-                        </form>
-                        <form asp-action="SetStatus" asp-route-id="@job.Id" asp-route-status="Retur" method="post" style="display:inline;">
-                            <button class="btn btn-sm btn-outline-danger ms-1">Retur</button>
                         </form>
                     </td>
                 </tr>

@@ -6,7 +6,7 @@ using MonteringService.Models;
 namespace MonteringService.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/montering")]
     public class MonteringApiController : ControllerBase
     {
         private readonly MonteringDbContext _context;
@@ -16,7 +16,6 @@ namespace MonteringService.Controllers
             _context = context;
         }
 
-        // POST: Create new montering job
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] MonteringJob job)
         {
@@ -28,11 +27,9 @@ namespace MonteringService.Controllers
 
             _context.MonteringJobs.Add(job);
             await _context.SaveChangesAsync();
-
             return Ok();
         }
 
-        // DELETE: Remove job by RefNo
         [HttpDelete("{refNo}")]
         public async Task<IActionResult> Delete(string refNo)
         {
@@ -41,7 +38,6 @@ namespace MonteringService.Controllers
 
             _context.MonteringJobs.Remove(job);
             await _context.SaveChangesAsync();
-
             return NoContent();
         }
     }

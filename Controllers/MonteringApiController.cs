@@ -32,6 +32,8 @@ namespace MonteringService.Controllers
             job.Latitude = lat;
             job.Longitude = lon;
 
+            Console.WriteLine($"Coordinates saved for '{job.Adresse}': Latitude={lat}, Longitude={lon}");
+
             _context.MonteringJobs.Add(job);
             await _context.SaveChangesAsync();
             return Ok();

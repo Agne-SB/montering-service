@@ -32,9 +32,9 @@ app.UseStaticFiles();
 app.Use(async (context, next) =>
 {
     context.Response.Headers.Remove("X-Frame-Options");
+    context.Response.Headers.Add("Content-Security-Policy", "frame-ancestors *");
     await next();
 });
-
 
 app.UseRouting();
 

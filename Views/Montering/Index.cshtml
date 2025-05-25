@@ -54,7 +54,7 @@
             if (job.latitude && job.longitude) {
                 L.marker([job.latitude, job.longitude])
                     .addTo(map)
-                    .bindPopup(`<strong>RefNo:</strong> ${job.refNo}<br/><strong>Adresse:</strong> ${job.adresse}`);
+                    .bindPopup(`<strong>${job.refNo}</strong><br>${job.adresse}`);
             }
         });
     </script>

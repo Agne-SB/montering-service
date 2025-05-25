@@ -29,6 +29,13 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+app.Use(async (context, next) =>
+{
+    context.Response.Headers.Remove("X-Frame-Options");
+    await next();
+});
+
+
 app.UseRouting();
 
 app.UseAuthorization();
